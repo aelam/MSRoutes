@@ -1,6 +1,6 @@
 # MSRoutes
 
-[![CI Status](http://img.shields.io/travis/Ryan Wang/MSRoutes.svg?style=flat)](https://travis-ci.org/Ryan Wang/MSRoutes)
+[![CI Status](http://img.shields.io/travis/aelam/MSRoutes.svg?style=flat)](https://travis-ci.org/aelam/MSRoutes)
 [![Version](https://img.shields.io/cocoapods/v/MSRoutes.svg?style=flat)](http://cocoapods.org/pods/MSRoutes)
 [![License](https://img.shields.io/cocoapods/l/MSRoutes.svg?style=flat)](http://cocoapods.org/pods/MSRoutes)
 [![Platform](https://img.shields.io/cocoapods/p/MSRoutes.svg?style=flat)](http://cocoapods.org/pods/MSRoutes)
