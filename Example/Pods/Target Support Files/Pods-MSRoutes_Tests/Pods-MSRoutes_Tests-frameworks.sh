@@ -84,6 +84,7 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-MSRoutes_Tests/JLRoutes.framework"
   install_framework "Pods-MSRoutes_Tests/MSRoutes.framework"
   install_framework "Pods-MSRoutes_Tests/Expecta.framework"
   install_framework "Pods-MSRoutes_Tests/Expecta_Snapshots.framework"
@@ -91,6 +92,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-MSRoutes_Tests/Specta.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-MSRoutes_Tests/JLRoutes.framework"
   install_framework "Pods-MSRoutes_Tests/MSRoutes.framework"
   install_framework "Pods-MSRoutes_Tests/Expecta.framework"
   install_framework "Pods-MSRoutes_Tests/Expecta_Snapshots.framework"

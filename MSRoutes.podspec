@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MSRoutes"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "Enhanced version of JLRoutes."
 
   s.description      = <<-DESC

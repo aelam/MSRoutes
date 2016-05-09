@@ -12,6 +12,9 @@
 
 - (instancetype)initWithRouterParams:(NSDictionary *)params;
 
+@optional
+- (void)setRouterParams:(NSDictionary *)params;
+
 @end
 
 @interface UINavigationController (Routes)
