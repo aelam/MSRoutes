@@ -1,6 +1,0 @@
-framework module Pods_MSRoutes_Tests {
-  umbrella header "Pods-MSRoutes_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,35 +1,19 @@
 PODS:
-  - Expecta (1.0.5)
-  - Expecta+Snapshots (2.0.0):
-    - Expecta (~> 1.0)
-    - FBSnapshotTestCase/Core (~> 2.0.3)
-  - FBSnapshotTestCase (2.0.7):
-    - FBSnapshotTestCase/SwiftSupport (= 2.0.7)
-  - FBSnapshotTestCase/Core (2.0.7)
-  - FBSnapshotTestCase/SwiftSupport (2.0.7):
-    - FBSnapshotTestCase/Core
-  - JLRoutes (1.5.5)
-  - MSRoutes (0.1.1):
-    - JLRoutes (~> 1.5.3)
-  - Specta (1.0.5)
+  - JLRoutes (2.0)
+  - MSRoutes (1.0.0):
+    - JLRoutes
 
 DEPENDENCIES:
-  - Expecta
-  - Expecta+Snapshots
-  - FBSnapshotTestCase
   - MSRoutes (from `../`)
-  - Specta
 
 EXTERNAL SOURCES:
   MSRoutes:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  Expecta: e1c022fcd33910b6be89c291d2775b3fe27a89fe
-  Expecta+Snapshots: 29b38dd695bc72a0ed2bea833937d78df41943ba
-  FBSnapshotTestCase: 7e85180d0d141a0cf472352edda7e80d7eaeb547
-  JLRoutes: d191a496b820f60d70225202d04289582da962df
-  MSRoutes: 90bcd5f1b8f3d92e7af2005d005094900f2eba7b
-  Specta: ac94d110b865115fe60ff2c6d7281053c6f8e8a2
+  JLRoutes: 0bead23690bafa726e1528aa6459a56c9b81cb5e
+  MSRoutes: 7e065489de56387c59d9641087b29cb831af27f3
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 67d04d352450daa756fb5125518b01c289d1e415
+
+COCOAPODS: 1.1.1

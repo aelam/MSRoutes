@@ -1,0 +1,9 @@
+{
+    "linters": {
+        "MobileLintEngine": {
+            "type": "MobileLintEngine",
+            "text.max-line-length": 120,
+            "text.max-line-length.long": 250
+        }
+    }
+}

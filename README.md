@@ -9,6 +9,11 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+
+
+### load URLs from Plist
+An URL maps to a class
+
 ## Requirements
 
 ## Installation

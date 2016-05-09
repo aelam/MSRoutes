@@ -41,5 +41,12 @@
     }
 }
 
+- (instancetype)initWithRouterParams:(NSDictionary *)params {
+    if (self = [self init]) {
+        
+    }
+    return self;
+}
+
 
 @end

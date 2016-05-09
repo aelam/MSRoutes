@@ -1,0 +1,8 @@
+{
+  "phabricator.uri": "http://ph.benemind.com/",
+  "phutil_libraries" : [
+      "cassowary/libcassowary/src"
+  ],
+  "lint.engine" : "MobileLintEngine",
+  "unit.engine" : "MobileUnitTestEngine"
+}

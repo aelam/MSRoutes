@@ -1,15 +1,14 @@
 source 'https://github.com/CocoaPods/Specs.git'
-use_frameworks!
 
-target 'MSRoutes_Example', :exclusive => true do
+target 'MSRoutes_Example' do
   pod "MSRoutes", :path => "../"
 end
 
-target 'MSRoutes_Tests', :exclusive => true do
+target 'MSRoutes_Tests' do
   pod "MSRoutes", :path => "../"
 
-  pod 'Specta'
-  pod 'Expecta'
-  pod 'FBSnapshotTestCase'
-  pod 'Expecta+Snapshots'
+#  pod 'Specta'
+#  pod 'Expecta'
+#  pod 'FBSnapshotTestCase'
+#  pod 'Expecta+Snapshots'
 end

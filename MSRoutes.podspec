@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MSRoutes"
-  s.version          = "0.1.2"
+  s.version          = "1.0.0"
   s.summary          = "Enhanced version of JLRoutes."
 
   s.description      = <<-DESC
@@ -26,5 +26,5 @@ DESC
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
-  s.dependency 'JLRoutes', '~> 1.5.3'
+  s.dependency 'JLRoutes'
 end
