@@ -11,19 +11,33 @@
 
 @implementation JLRoutes (Plist)
 
-+ (void)registerRoutesPlist:(NSString *)plistFile {
-    [[self globalRoutes] registerRoutesPlist:plistFile];
-}
-
 - (void)registerRoutesPlist:(NSString *)plistFile {
     if (plistFile == nil) {
-        NSAssert(plistFile, @"plistFile Path should not be nil");
         return;
     }
     NSDictionary *plist = [NSDictionary dictionaryWithContentsOfFile:plistFile];
-    for(NSString *URL in plist) {
-        [self registerRoute:URL pushingControllerName:plist[URL]];
+    [self registerRoutes:plist];
+}
+
+- (void)unregisterRoutesPlist:(NSString *)plistFile {
+    if (plistFile == nil) {
+        return;
+    }
+    NSDictionary *plist = [NSDictionary dictionaryWithContentsOfFile:plistFile];
+    [self unregisterRoutes:plist];
+}
+
+- (void)registerRoutes:(NSDictionary *)routes {
+    for(NSString *URL in routes) {
+        [self registerRoute:URL pushingControllerName:routes[URL]];
     }
 }
+
+- (void)unregisterRoutes:(NSDictionary *)routes {
+    for(NSString *URL in routes) {
+        [self removeRoute:URL];
+    }
+}
+
 
 @end

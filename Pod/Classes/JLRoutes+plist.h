@@ -10,7 +10,11 @@
 
 @interface JLRoutes (Plist)
 
-+ (void)registerRoutesPlist:(NSString *)plistFile;
 - (void)registerRoutesPlist:(NSString *)plistFile;
+- (void)unregisterRoutesPlist:(NSString *)plistFile;
+
+- (void)registerRoutes:(NSDictionary *)routes;
+- (void)unregisterRoutes:(NSDictionary *)routes;
+
 
 @end
