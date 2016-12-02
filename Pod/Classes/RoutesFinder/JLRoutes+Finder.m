@@ -23,8 +23,8 @@
 
 - (void)registerRoute:(NSString *)path pushingControllerClass:(Class)controllerClass {
     [self addRoute:path handler:^BOOL (NSDictionary *parameters) {
-        [MSActiveControllerFinder finder].resetStatus();
-        UINavigationController *navigator = [MSActiveControllerFinder finder].activeNavigationController();
+        [MSActiveControllerFinder sharedFinder].resetStatus();
+        UINavigationController *navigator = [MSActiveControllerFinder sharedFinder].activeNavigationController();
         [navigator pushViewControllerClass:controllerClass params:parameters];
         return YES;
     }];
@@ -32,8 +32,8 @@
 
 - (void)registerRoute:(NSString *)path presentingControllerClass:(Class)controllerClass {
     [self addRoute:path handler:^BOOL (NSDictionary *parameters) {
-        [MSActiveControllerFinder finder].resetStatus();
-        UIViewController *topViewController = [MSActiveControllerFinder finder].activeTopController();
+        [MSActiveControllerFinder sharedFinder].resetStatus();
+        UIViewController *topViewController = [MSActiveControllerFinder sharedFinder].activeTopController();
         [topViewController presentViewControllerClass:controllerClass params:parameters animated:YES completion:NULL];
         return YES;
     }];

@@ -29,6 +29,20 @@ pod "MSRoutes"
 
 Ryan Wang, wanglun02@gmail.com
 
+## Changelog
+
+### 1.2.0
+* MSActiveFinder 里面的
+  `+setFinder` 改名为`+setSharedFinder`
+  `+finder`  改名为`+sharedFinder`
+
+### 1.1.0
+* Routes 增加plist加载方式
+
+
+
+
+
 ## License
 
 MSRoutes is available under the MIT license. See the LICENSE file for more info.

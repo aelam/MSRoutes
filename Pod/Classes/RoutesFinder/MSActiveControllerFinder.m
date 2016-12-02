@@ -8,23 +8,35 @@
 
 #import "MSActiveControllerFinder.h"
 
-static MSActiveControllerFinder *finder = nil;
+static MSActiveControllerFinder *_sharedFinder = nil;
 
 @implementation MSActiveControllerFinder
 
-+ (void)setFinder:(id<MSActiveControllerFinder>)aFinder {
-    finder = aFinder;
++ (void)setSharedFinder:(id<MSActiveControllerFinder>)finder {
+    if (_sharedFinder != finder) {
+        _sharedFinder = finder;
+    }
 }
 
-+ (instancetype)finder {
-    if (finder) {
-        return finder;
++ (instancetype)sharedFinder {
+    if (_sharedFinder) {
+        return _sharedFinder;
     }
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        finder = [[self alloc] init];
+        _sharedFinder = [[self alloc] init];
     });
-    return finder;
+    return _sharedFinder;
+}
+
++ (void)setFinder:(id<MSActiveControllerFinder>)finder {
+    NSLog(@"[WARNING]: 请使用+setSharedFinder:");
+    [self setSharedFinder:finder];
+}
+
++ (instancetype)finder {
+    NSLog(@"[WARNING]: 请使用+sharedFinder");
+    return [self sharedFinder];
 }
 
 - (instancetype)init {

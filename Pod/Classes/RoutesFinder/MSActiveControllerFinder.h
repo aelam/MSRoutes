@@ -26,13 +26,20 @@ typedef void (^FinderResetStatus)(void);
 
 @interface MSActiveControllerFinder : NSObject <MSActiveControllerFinder>
 
-+ (void)setFinder:(id<MSActiveControllerFinder>)finder;
-+ (instancetype)finder;
-
 @property (nonatomic, copy) ActiveTopController activeTopController;
 @property (nonatomic, copy) ActiveNavigationController activeNavigationController;
 @property (nonatomic, copy) ActiveTabBarController activeTabBarController;
 @property (nonatomic, copy) ActiveTabBarController rootTabBarController;
 @property (nonatomic, copy) FinderResetStatus resetStatus;
+
+//
+// 注意使用+sharedFinder, +setSharedFinder: 代替+finder, +setFinder:
+// 后面会显式淘汰
+//
++ (void)setSharedFinder:(id<MSActiveControllerFinder>)finder;
++ (instancetype)sharedFinder;
+
++ (void)setFinder:(id<MSActiveControllerFinder>)finder;
++ (instancetype)finder;
 
 @end

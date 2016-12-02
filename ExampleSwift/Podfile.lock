@@ -1,0 +1,19 @@
+PODS:
+  - JLRoutes (2.0.1)
+  - MSRoutes (1.1.0):
+    - JLRoutes
+
+DEPENDENCIES:
+  - MSRoutes (from `../`)
+
+EXTERNAL SOURCES:
+  MSRoutes:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JLRoutes: 3652abe3b4ac51bc93ec3a371353d762e8566092
+  MSRoutes: b0b7654bf2e1b61145da7c7eaea5cd4def86286a
+
+PODFILE CHECKSUM: 9b4d1dc959f1bb3260e3320c691b691cb86db167
+
+COCOAPODS: 1.1.1

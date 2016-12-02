@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "MSRoutes"
-  s.version          = "1.1.0"
+  s.version          = "1.2.0"
   s.summary          = "Enhanced version of JLRoutes."
 
   s.description      = <<-DESC
@@ -22,8 +22,8 @@ DESC
   s.author           = { "Ryan Wang" => "wanglun02@gmail.com" }
   s.source           = { :git => "https://github.com/aelam/MSRoutes.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '7.0'
-  s.requires_arc = true
+  s.platform         = :ios, '7.0'
+  s.requires_arc     = true
 
   s.source_files = 'Pod/Classes/**/*'
   s.dependency 'JLRoutes'
