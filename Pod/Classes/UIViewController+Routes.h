@@ -7,17 +7,19 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol UIViewControllerRoutable;
+
 // 使用 UIViewControllerRoutable. UIViewControllerRouter后期会删掉
-@protocol UIViewControllerRouter <NSObject>
+@protocol UIViewControllerRouter <UIViewControllerRoutable>
+
+@end
+
+@protocol UIViewControllerRoutable <NSObject>
 
 - (instancetype)initWithRouterParams:(NSDictionary *)params;
 
 @optional
 - (void)setRouterParams:(NSDictionary *)params;
-
-@end
-
-@protocol UIViewControllerRoutable <UIViewControllerRouter>
 
 @end
 
