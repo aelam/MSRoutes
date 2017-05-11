@@ -1,6 +1,6 @@
 {
   "name": "MSRoutes",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "summary": "Enhanced version of JLRoutes.",
   "description": "Based on JLRoutes.\nAdded UIViewControllerRoute protocol.\nAdded MSRouteItem, every module can have a lot of module-based items and then let the module-loader load the items in JLRoutes",
   "homepage": "https://github.com/aelam/MSRoutes",
@@ -10,16 +10,34 @@
   },
   "source": {
     "git": "https://github.com/aelam/MSRoutes.git",
-    "tag": "1.0.0"
+    "tag": "1.2.1"
   },
   "platforms": {
     "ios": "7.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
   "dependencies": {
     "JLRoutes": [
 
     ]
-  }
+  },
+  "subspecs": [
+    {
+      "name": "Routes",
+      "source_files": "MSRoutes/Routes/**/*.{c,m,h,swift}"
+    },
+    {
+      "name": "RouteFinder",
+      "source_files": "MSRoutes/RouteFinder/**/*.{c,m,h,swift}"
+    },
+    {
+      "name": "GeneralRouteFinders",
+      "source_files": "MSRoutes/GeneralRouteFinders/**/*.{c,m,h,swift}",
+      "dependencies": {
+        "MSRoutes/Routes": [
+
+        ]
+      }
+    }
+  ]
 }

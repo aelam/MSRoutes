@@ -1,6 +1,11 @@
 PODS:
-  - JLRoutes (2.0.1)
-  - MSRoutes (1.1.0):
+  - JLRoutes (2.0.5)
+  - MSRoutes (1.2.1):
+    - MSRoutes/RouteFinder (= 1.2.1)
+    - MSRoutes/Routes (= 1.2.1)
+  - MSRoutes/RouteFinder (1.2.1):
+    - MSRoutes/Routes
+  - MSRoutes/Routes (1.2.1):
     - JLRoutes
 
 DEPENDENCIES:
@@ -11,8 +16,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  JLRoutes: 3652abe3b4ac51bc93ec3a371353d762e8566092
-  MSRoutes: b0b7654bf2e1b61145da7c7eaea5cd4def86286a
+  JLRoutes: 2a5ee61d739b51a98c9d8112bee5149a19de8854
+  MSRoutes: da857f37f47b0a4289538c4af8b959efc805e27b
 
 PODFILE CHECKSUM: 9b4d1dc959f1bb3260e3320c691b691cb86db167
 

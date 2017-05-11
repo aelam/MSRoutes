@@ -1,14 +1,6 @@
-#
-# Be sure to run `pod lib lint MSRoutes.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
   s.name             = "MSRoutes"
-  s.version          = "1.2.1"
+  s.version          = "1.2.2"
   s.summary          = "Enhanced version of JLRoutes."
 
   s.description      = <<-DESC
@@ -24,7 +16,20 @@ DESC
 
   s.platform         = :ios, '7.0'
   s.requires_arc     = true
+  s.source_files = 'MSRoutes/MSRoutes.h'
 
-  s.source_files = 'Pod/Classes/**/*'
-  s.dependency 'JLRoutes'
+  s.subspec 'Routes' do |ss|
+    ss.source_files = 'MSRoutes/Routes/**/*.{c,m,h,swift}'    
+    ss.dependency 'MSRoutes/RouteFinder'
+  end
+
+  s.subspec 'RouteFinder' do |ss|
+    ss.source_files = 'MSRoutes/RouteFinder/**/*.{c,m,h,swift}'
+    ss.dependency 'JLRoutes'
+  end
+
+#s.subspec 'GeneralRouteFinders' do |ss|
+#end
+
+
 end

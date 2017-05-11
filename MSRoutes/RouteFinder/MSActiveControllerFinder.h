@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 typedef UIViewController *(^ActiveTopController)(void);
 typedef UINavigationController *(^ActiveNavigationController)(void);
 typedef UITabBarController *(^ActiveTabBarController)(void);
@@ -43,3 +44,5 @@ typedef void (^FinderResetStatus)(void);
 + (instancetype)finder;
 
 @end
+
+

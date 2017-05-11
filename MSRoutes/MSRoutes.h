@@ -9,9 +9,11 @@
 #ifndef MSROUTES_H
 #define MSROUTES_H
 
-#import <MSRoutes/JLRoutes+plist.h>
-#import <MSRoutes/JLRoutes+Finder.h>
 #import <MSRoutes/UIViewController+Routes.h>
 #import <MSRoutes/MSActiveControllerFinder.h>
+
+#import <MSRoutes/JLRoutes+Finder.h>
+#import <MSRoutes/JLRoutes+plist.h>
+
 
 #endif /* MSROUTES_H */
