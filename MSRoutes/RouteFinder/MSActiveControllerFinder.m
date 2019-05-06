@@ -94,7 +94,11 @@ static MSActiveControllerFinder *_sharedFinder = nil;
 
 - (UINavigationController *)defaultActiveNavigationController {
     UITabBarController *tabBarController = [self defaultActiveTabBarController];
-    if ([tabBarController isKindOfClass:[UITabBarController class]]) {
+    UIViewController *presentedViewController = tabBarController.presentedViewController;
+    
+    if (presentedViewController && [presentedViewController isKindOfClass:[UINavigationController class]]) {
+        return tabBarController.presentedViewController;
+    } else if ([tabBarController isKindOfClass:[UITabBarController class]]) {
         UINavigationController *navigationController = [tabBarController selectedViewController];
         if ([navigationController isKindOfClass:[UINavigationController class]]) {
             return navigationController;
